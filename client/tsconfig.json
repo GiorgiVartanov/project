@@ -18,7 +18,14 @@
     "strict": false, // change to tue letter
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    "suppressImplicitAnyIndexErrors": true,
+    "noImplicitAny": false,
+    "noImplicitThis": false,
+
+    "allowUnusedLabels": true,
+    "allowUnreachableCode": true
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
