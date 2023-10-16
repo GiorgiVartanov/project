@@ -1,0 +1,100 @@
+@import "../../variables";
+
+.main-page {
+  .hero {
+    position: relative;
+    height: 420px;
+
+    .options {
+      position: absolute;
+      top: 60px;
+      right: 480px;
+
+      max-width: 320px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+
+      a {
+        padding: 1rem 1.25rem;
+        background-color: $secondary-color-dimmer;
+
+        &.main-button {
+          background-color: $primary-color;
+        }
+
+        &:hover {
+          box-shadow: 0px 0px 3px 1px $primary-color;
+          text-shadow: 0px 0px 2px white;
+          opacity: 1;
+        }
+
+        p {
+          font-size: 1.5rem;
+          line-height: 1.5rem;
+          font-weight: 600;
+        }
+
+        span {
+          opacity: 0.6;
+          font-size: 0.85rem;
+          line-height: 0.85rem;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $width-3xl) {
+  .main-page {
+    .hero {
+      .options {
+        right: 320px;
+      }
+    }
+  }
+}
+@media screen and (max-width: $width-2xl) {
+  .main-page {
+    .hero {
+      .options {
+        right: 240px;
+      }
+    }
+  }
+}
+@media screen and (max-width: $width-xl) {
+  .main-page {
+    .hero {
+      .options {
+        right: 160px;
+      }
+    }
+  }
+}
+@media screen and (max-width: $width-lg) {
+  .main-page {
+    .hero {
+      .options {
+        right: 80px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $width-sm) {
+  .main-page {
+    .hero {
+      .options {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+
+        button {
+          margin: 0 0.5rem;
+        }
+      }
+    }
+  }
+}

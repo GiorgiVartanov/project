@@ -1,0 +1,82 @@
+@import "../../variables.scss";
+
+.text-component {
+  max-width: 720px;
+  margin: auto;
+
+  .text-panel {
+    display: flex;
+    gap: 1rem;
+    margin: 0 0.25rem 1.25rem 0.25rem;
+
+    .word-count {
+      color: $primary-color;
+    }
+
+    .time {
+      color: $primary-color;
+    }
+  }
+
+  .hidden-input {
+    visibility: hidden;
+    width: 0;
+  }
+
+  .text {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.25rem;
+    margin-left: unset;
+    user-select: none;
+
+    .word {
+      color: rgb(143, 143, 143);
+      margin: 0 0.25rem;
+
+      &.final-word {
+        .incorrect-letter {
+          color: rgb(197, 56, 56) !important;
+        }
+      }
+
+      .letter {
+        transition: all 0.3s ease;
+
+        &.active-letter {
+          color: rgb(143, 143, 143);
+          text-decoration: underline;
+          position: relative;
+        }
+
+        &.correct-letter {
+          color: rgb(211, 211, 211);
+        }
+
+        &.incorrect-letter {
+          color: rgb(231, 76, 76);
+
+          animation: shake 0.2s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+        }
+      }
+    }
+  }
+}
+
+// @keyframes shake {
+//   0% {
+//     transform: translateX(0);
+//   }
+//   25% {
+//     transform: translateX(-20.5px);
+//   }
+//   50% {
+//     transform: translateX(20.5px);
+//   }
+//   75% {
+//     transform: translateX(-20.5px);
+//   }
+//   100% {
+//     transform: translateX(0);
+//   }
+// }

@@ -1,0 +1,63 @@
+@import "../../variables.scss";
+
+.lesson-list-page {
+  .lesson-card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 728px;
+    margin: auto;
+
+    .lesson-card {
+      padding: 0.5rem;
+      background-color: $dark-gray;
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        max-width: 300px;
+      }
+
+      h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+      }
+
+      p,
+      span {
+        opacity: 0.85;
+        font-weight: 300;
+        font-size: 0.85rem;
+      }
+
+      .lesson-information {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        div:nth-of-type(2) {
+          display: flex;
+          gap: 1.25rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $width-sm) {
+  .lesson-list-page {
+    .lesson-card-list {
+      .lesson-card {
+        flex-direction: column;
+
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
